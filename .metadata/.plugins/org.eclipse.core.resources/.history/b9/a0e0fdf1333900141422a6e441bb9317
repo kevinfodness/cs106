@@ -12,15 +12,6 @@ public class TipCalculator {
 	 * @param args Arguments passed to the constructor.
 	 */
 	public static void main(String[] args) {
-		restaurantTip(20.00);
-	}
-	
-	/**
-	 * A function to calculate a tip for a restaurant.
-	 * 
-	 * 
-	 */
-	public static void restaurantTip(double total) {
-		System.out.println(total);
+		System.out.println("Scaffolded tip calculator.");
 	}
 }
