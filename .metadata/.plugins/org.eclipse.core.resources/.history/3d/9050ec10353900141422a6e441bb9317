@@ -29,11 +29,8 @@ public class TipCalculator {
 	 */
 	public static void barTip(double total) {
 		
-		/* Calculate the tip amount. */
-		double tipAmount = total * 0.25;
-		
 		/* Print the tip amount in a user-friendly way. */
-		System.out.println("Bar tip amount: $" + tipAmount);
+		System.out.print("Bar tip amount: $1.00");
 	}
 
 	/**
@@ -47,7 +44,7 @@ public class TipCalculator {
 		double tipAmount = total * 0.10;
 		
 		/* Print the tip amount in a user-friendly way. */
-		System.out.println("Delivery tip amount: $" + tipAmount);
+		System.out.print("Delivery tip amount: $" + tipAmount);
 	}
 
 	/**
@@ -61,6 +58,6 @@ public class TipCalculator {
 		double tipAmount = total * 0.20;
 		
 		/* Print the tip amount in a user-friendly way. */
-		System.out.println("Restaurant tip amount: $" + tipAmount);
+		System.out.print("Restaurant tip amount: $" + tipAmount);
 	}
 }
