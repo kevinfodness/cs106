@@ -12,12 +12,7 @@ public class TipCalculator {
 	 * @param args Arguments passed to the constructor.
 	 */
 	public static void main(String[] args) {
-		
-		/* Define the total amount of the bill. */
-		double total = 20.00;
-		
-		/* Print tips in various contexts. */
-		restaurantTip(total);
+		restaurantTip(20.00);
 	}
 	
 	/**
@@ -31,6 +26,6 @@ public class TipCalculator {
 		double tipAmount = total * 0.20;
 		
 		/* Print the tip amount in a user-friendly way. */
-		System.out.print("Restaurant tip amount: $" + tipAmount);
+		System.out.print("$" + tipAmount);
 	}
 }
