@@ -13,6 +13,6 @@ public class HelloWorld {
 	 * @return void
 	 */
 	public static void main(String[] args) {
-		System.out.println("Hello World!");
+		System.out.println("\"Let's get dinner,\" he said.");
 	}
 }
