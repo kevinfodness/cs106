@@ -26,6 +26,9 @@ public class TipCalculator {
 		double tipAmount = total * 0.20;
 		
 		/* Print the tip amount in a user-friendly way. */
-		System.out.print("$" + tipAmount);
+		System.out.print("$");
+		System.out.print((int) tipAmount);
+		System.out.print(".");
+		System.out.print(tipAmount % 100);
 	}
 }

@@ -22,10 +22,6 @@ public class TipCalculator {
 	 */
 	public static void restaurantTip(double total) {
 		
-		/* Calculate the tip amount. */
-		double tipAmount = total * 0.20;
-		
-		/* Print the tip amount in a user-friendly way. */
-		System.out.print("$" + tipAmount);
+		System.out.println(total * 0.20);
 	}
 }
