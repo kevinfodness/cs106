@@ -15,6 +15,7 @@ public class TipCalculator {
 		
 		/* Define the total amount of the bill. */
 		double total = 20.00;
+		System.out.println(Math.pow(total, 2));
 		
 		/* Print tips in various contexts. */
 		barTip(total);
