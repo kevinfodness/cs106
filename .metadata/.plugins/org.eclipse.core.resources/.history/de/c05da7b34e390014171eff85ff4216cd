@@ -21,12 +21,6 @@ public class TipCalculator {
 		barTip(total);
 		deliveryTip(total);
 		restaurantTip(total);
-		
-		barTip2();
-	}
-	
-	public static void barTip2() {
-		System.out.println(20.00 * 0.20);
 	}
 	
 	/**
