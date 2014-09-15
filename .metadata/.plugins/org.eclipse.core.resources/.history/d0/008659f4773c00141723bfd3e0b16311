@@ -11,19 +11,17 @@ public class TestProject {
 	 * @param args Arguments passed to the program.
 	 */
 	public static void main(String[] args) {
-		double tip = getTip(20.00, 0.20);
-		System.out.println("$" + tip);
+		printTip(20.00, 0.20);
 	}
 	
 	/**
-	 * Method to get the tip based on a provided total and percent.
+	 * Method to print the tip based on a provided total and percentage.
 	 * 
 	 * @param total   The total of the bill without tip.
 	 * @param percent The percentage of the total to give as tip.
-	 * 
-	 * @return double The amount of the tip.
 	 */
-	public static double getTip(double total, double percent) {
-	    return total * percent;
+	public static void printTip(double total, double percent) {
+	    double tip = total * percent;
+	    System.out.println("$" + tip);
 	}
 }
