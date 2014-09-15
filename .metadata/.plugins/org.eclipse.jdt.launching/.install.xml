@@ -2,4 +2,5 @@
 <dirs>
 <entry loc="/usr/lib/jvm/java-7-openjdk-amd64" stamp="1409052645000"/>
 <entry loc="/opt/jdk1.7.0_55" stamp="1401909448000"/>
+<entry loc="/usr/lib/jvm/java-7-openjdk-amd64/jre" stamp="1409052657000"/>
 </dirs>
