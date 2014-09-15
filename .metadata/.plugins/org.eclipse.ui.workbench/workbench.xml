@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="21" version="2.0">
+<workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
 <window height="767" maximized="true" width="1018" x="0" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -34,9 +34,9 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TipCalculator.java" partName="TipCalculator.java" path="/home/kevin/cs106/Project 1/src/TipCalculator.java" title="TipCalculator.java" tooltip="Project 1/src/TipCalculator.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Project 1/src/TipCalculator.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="746" selectionTopPixel="408"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestProject.java" partName="TestProject.java" path="/home/kevin/cs106/Test Project/src/TestProject.java" title="TestProject.java" tooltip="Test Project/src/TestProject.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Test Project/src/TestProject.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="394" selectionTopPixel="34"/>
 </editor>
 </editors>
 <views>
@@ -286,6 +286,7 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Hello World/src/HelloWorld.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Project 1/src/TipCalculator.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Test Project/src/TestProject.java"/>
 </editors>
 <item historyLabel="HelloWorld.java" index="0">
 <position info="not_deleted" x="0" y="0"/>
@@ -329,8 +330,23 @@
 <item historyLabel="TipCalculator.java" index="1">
 <position info="not_deleted" x="457" y="0"/>
 </item>
-<item active="true" historyLabel="TipCalculator.java" index="1">
-<position info="not_deleted" x="479" y="0"/>
+<item historyLabel="TipCalculator.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TipCalculator.java" index="1">
+<position info="not_deleted" x="136" y="0"/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position info="not_deleted" x="359" y="0"/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position info="not_deleted" x="392" y="0"/>
+</item>
+<item active="true" historyLabel="TestProject.java" index="2">
+<position/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -349,6 +365,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestProject.java" tooltip="Test Project/src/TestProject.java">
+<persistable path="/Test Project/src/TestProject.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TipCalculator.java" tooltip="Project 1/src/TipCalculator.java">
 <persistable path="/Project 1/src/TipCalculator.java"/>
 </file>
