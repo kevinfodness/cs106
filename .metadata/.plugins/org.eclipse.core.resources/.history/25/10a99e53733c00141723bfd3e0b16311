@@ -15,10 +15,9 @@ public class TestProject {
 	}
 	
 	/**
-	 * Method to print the tip based on a provided total and percentage.
+	 * Method to print the tip based on a provided total.
 	 * 
-	 * @param total   The total of the bill without tip.
-	 * @param percent The percentage of the total to give as tip.
+	 * @param total The total of the bill without tip.
 	 */
 	public static void printTip(double total, double percent) {
 	    double tip = total * percent;
