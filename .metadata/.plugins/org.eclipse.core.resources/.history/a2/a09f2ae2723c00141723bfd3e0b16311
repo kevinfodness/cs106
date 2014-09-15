@@ -11,7 +11,7 @@ public class TestProject {
 	 * @param args Arguments passed to the program.
 	 */
 	public static void main(String[] args) {
-		printTip(20.00, 0.20);
+		printTip(20.00);
 	}
 	
 	/**
@@ -19,8 +19,8 @@ public class TestProject {
 	 * 
 	 * @param total The total of the bill without tip.
 	 */
-	public static void printTip(double total, double percent) {
-	    double tip = total * percent;
+	public static void printTip(double total) {
+	    double tip = total * 0.20;
 	    System.out.println("$" + tip);
 	}
 }
