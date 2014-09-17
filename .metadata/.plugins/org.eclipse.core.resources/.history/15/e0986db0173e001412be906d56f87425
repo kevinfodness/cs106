@@ -17,6 +17,5 @@ public class TestProject {
 		Scanner console = new Scanner(System.in);
 		System.out.print("Total amount: ");
 		double total = console.nextDouble();
-		System.out.println("$" + total);
 	}
 }
