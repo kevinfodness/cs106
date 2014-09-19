@@ -18,12 +18,5 @@ public class SmileyFace {
 		
 		/* Create a drawing panel. */
 		DrawingPanel panel = new DrawingPanel(500, 500);
-
-		/* Get the graphics object to start drawing. */
-		Graphics g = panel.getGraphics();
-		
-		/* TODO: Create a yellow circle. */
-		/* TODO: Create two black circles for eyes. */
-		/* TODO: Create a semicircle for a mouth. */
 	}
 }
