@@ -26,8 +26,7 @@ public class SmileyFace {
 		
 		/* Draw the smiley face. */
 		drawYellowCircle(g);
-		drawEye(g, 325, 200);
-		drawEye(g, 175, 200);
+		drawEyes(g);
 		
 		/* TODO: Create a semicircle for a mouth. */
 	}
@@ -36,20 +35,14 @@ public class SmileyFace {
 	 * A method to draw an eye on the smiley face.
 	 * 
 	 * @param g The graphics object attached to the canvas.
-	 * @param x The x position of the eye.
-	 * @param y The y position of the eye.
 	 * 
 	 * @return void
 	 */
-	public static void drawEye(Graphics g, int x, int y) {
-		
-		/* Store eye dimensions. */
-		int height = 100;
-		int width = 50;
+	public static void drawEyes(Graphics g) {
 		
 		/* Draw an eye. */
 		g.setColor(Color.BLACK);
-		g.fillOval(x - (width / 2), y - (height / 2), width, height);
+		g.fillOval(325, 200, 30, 30);
 	}
 	
 	/**
