@@ -15,8 +15,6 @@ public class SmileyFace {
 	 * @param args Arguments passed to the program.
 	 */
 	public static void main(String[] args) {
-		
-		/* Create a drawing panel. */
-		DrawingPanel panel = new DrawingPanel(500, 500);
+		/* TODO: Figure out how to make graphics. */
 	}
 }

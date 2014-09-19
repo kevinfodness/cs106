@@ -1,6 +1,3 @@
-/* Add graphics library capabilities. */
-import java.awt.*;
-
 /**
  * Contains a program to create a smiley face.
  * 
@@ -16,7 +13,5 @@ public class SmileyFace {
 	 */
 	public static void main(String[] args) {
 		
-		/* Create a drawing panel. */
-		DrawingPanel panel = new DrawingPanel(500, 500);
 	}
 }
