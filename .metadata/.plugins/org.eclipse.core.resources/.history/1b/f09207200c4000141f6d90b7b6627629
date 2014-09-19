@@ -24,10 +24,6 @@ public class SmileyFace {
 		
 		/* Create a yellow circle. */
 		g.setColor(Color.YELLOW);
-		g.fillOval(50, 50, 400, 400);
-		
-		/* Add a black border to the circle. */
-		g.setColor(Color.BLACK);
 		g.drawOval(50, 50, 400, 400);
 		
 		/* TODO: Create two black circles for eyes. */
