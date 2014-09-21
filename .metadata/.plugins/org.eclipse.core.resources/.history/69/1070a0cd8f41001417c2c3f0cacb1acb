@@ -11,14 +11,11 @@ public class TestProject {
 	 * @param args Arguments passed to the program.
 	 */
 	public static void main(String[] args) {
-		System.out.println(sumOfSquares(10));
-	}
-	
-	public static int sumOfSquares(int max) {
-		int total = 0;
-		for (int i = 1; i <= max; i++) {
-			total += i * i;
+		String condition = "Good";
+		if (condition.equals("Good")) {
+			System.out.println("Value: $20.00");
+		} else {
+			System.out.println("Value: $10.00");
 		}
-		return total;
 	}
 }

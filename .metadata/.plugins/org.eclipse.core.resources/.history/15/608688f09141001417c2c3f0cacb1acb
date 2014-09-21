@@ -11,14 +11,9 @@ public class TestProject {
 	 * @param args Arguments passed to the program.
 	 */
 	public static void main(String[] args) {
-		System.out.println(sumOfSquares(10));
-	}
-	
-	public static int sumOfSquares(int max) {
-		int total = 0;
-		for (int i = 1; i <= max; i++) {
-			total += i * i;
+		double third = 1.0 / 3.0;
+		if (Math.abs(third - 0.333) < 0.001) {
+			System.out.println("Approximately equal.");
 		}
-		return total;
 	}
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="21" version="2.0">
+<workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
 <window height="767" maximized="true" width="1018" x="0" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -36,7 +36,7 @@
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestProject.java" partName="TestProject.java" path="/home/kevin/cs106/Test Project/src/TestProject.java" title="TestProject.java" tooltip="Test Project/src/TestProject.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Test Project/src/TestProject.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="443" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="369" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -46,8 +46,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings"/>
-<category IMemento.internal.id="Warnings (2 items)"/>
+<category IMemento.internal.id="Warnings (4 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="245" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -229,7 +228,6 @@
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -253,7 +251,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="318" ratioRight="954" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.2615992" ratioLeft="265" ratioRight="748" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.7493225" ratioLeft="553" ratioRight="185" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
@@ -272,13 +270,11 @@
 </folder>
 </info>
 <info folder="true" part="right" ratio="0.7494759" ratioLeft="715" ratioRight="239" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </mainWindow>
@@ -288,78 +284,159 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Hello World/src/HelloWorld.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Project 1/src/TipCalculator.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Smiley Face/src/SmileyFace.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Smiley Face/src/DrawingPanel.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Test Project/src/TestProject.java"/>
 </editors>
-<item historyLabel="HelloWorld.java" index="0">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="SmileyFace.java" index="0">
+<position info="not_deleted" x="581" y="0"/>
 </item>
-<item historyLabel="HelloWorld.java" index="0">
-<position info="not_deleted" x="346" y="0"/>
-</item>
-<item historyLabel="HelloWorld.java" index="0">
-<position info="not_deleted" x="349" y="0"/>
-</item>
-<item historyLabel="TipCalculator.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="TipCalculator.java" index="1">
+<item historyLabel="SmileyFace.java" index="0">
 <position/>
 </item>
-<item historyLabel="TipCalculator.java" index="1">
-<position info="not_deleted" x="349" y="0"/>
-</item>
-<item historyLabel="TipCalculator.java" index="1">
+<item historyLabel="SmileyFace.java" index="0">
 <position/>
 </item>
-<item historyLabel="TipCalculator.java" index="1">
-<position info="not_deleted" x="1564" y="0"/>
+<item historyLabel="SmileyFace.java" index="0">
+<position info="not_deleted" x="641" y="0"/>
 </item>
-<item historyLabel="TipCalculator.java" index="1">
-<position info="not_deleted" x="1577" y="0"/>
-</item>
-<item historyLabel="TipCalculator.java" index="1">
+<item historyLabel="SmileyFace.java" index="0">
 <position/>
 </item>
-<item historyLabel="TipCalculator.java" index="1">
+<item historyLabel="SmileyFace.java" index="0">
 <position/>
 </item>
-<item historyLabel="TipCalculator.java" index="1">
-<position/>
+<item historyLabel="SmileyFace.java" index="0">
+<position info="not_deleted" x="871" y="0"/>
 </item>
-<item historyLabel="TipCalculator.java" index="1">
-<position/>
+<item historyLabel="SmileyFace.java" index="0">
+<position info="not_deleted" x="641" y="0"/>
 </item>
-<item historyLabel="TipCalculator.java" index="1">
-<position info="not_deleted" x="457" y="0"/>
+<item historyLabel="SmileyFace.java" index="0">
+<position info="not_deleted" x="1021" y="0"/>
 </item>
-<item historyLabel="TipCalculator.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="SmileyFace.java" index="0">
+<position info="not_deleted" x="1175" y="0"/>
 </item>
-<item historyLabel="TipCalculator.java" index="1">
-<position info="not_deleted" x="136" y="0"/>
+<item historyLabel="SmileyFace.java" index="0">
+<position info="not_deleted" x="1193" y="0"/>
+</item>
+<item historyLabel="SmileyFace.java" index="0">
+<position info="not_deleted" x="1200" y="0"/>
+</item>
+<item historyLabel="SmileyFace.java" index="0">
+<position info="not_deleted" x="665" y="0"/>
+</item>
+<item historyLabel="SmileyFace.java" index="0">
+<position info="not_deleted" x="1174" y="0"/>
+</item>
+<item historyLabel="SmileyFace.java" index="0">
+<position info="not_deleted" x="652" y="0"/>
+</item>
+<item historyLabel="DrawingPanel.java" index="1">
+<position info="not_deleted" x="21089" y="0"/>
 </item>
 <item historyLabel="TestProject.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="TestProject.java" index="2">
-<position info="not_deleted" x="359" y="0"/>
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position info="not_deleted" x="434" y="0"/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position info="not_deleted" x="490" y="0"/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position info="not_deleted" x="364" y="0"/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
 </item>
 <item historyLabel="TestProject.java" index="2">
 <position info="not_deleted" x="392" y="0"/>
 </item>
 <item historyLabel="TestProject.java" index="2">
+<position info="not_deleted" x="370" y="0"/>
+</item>
+<item historyLabel="TestProject.java" index="2">
 <position/>
 </item>
 <item historyLabel="TestProject.java" index="2">
-<position info="not_deleted" x="476" y="0"/>
+<position info="not_deleted" x="401" y="0"/>
 </item>
 <item historyLabel="TestProject.java" index="2">
-<position info="not_deleted" x="477" y="0"/>
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position info="not_deleted" x="372" y="0"/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position info="not_deleted" x="363" y="0"/>
+</item>
+<item historyLabel="TestProject.java" index="2">
+<position info="not_deleted" x="362" y="0"/>
 </item>
 <item active="true" historyLabel="TestProject.java" index="2">
-<position info="not_deleted" x="545" y="0"/>
+<position info="not_deleted" x="410" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -380,6 +457,12 @@
 <mruList>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestProject.java" tooltip="Test Project/src/TestProject.java">
 <persistable path="/Test Project/src/TestProject.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DrawingPanel.java" tooltip="Smiley Face/src/DrawingPanel.java">
+<persistable path="/Smiley Face/src/DrawingPanel.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SmileyFace.java" tooltip="Smiley Face/src/SmileyFace.java">
+<persistable path="/Smiley Face/src/SmileyFace.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TipCalculator.java" tooltip="Project 1/src/TipCalculator.java">
 <persistable path="/Project 1/src/TipCalculator.java"/>

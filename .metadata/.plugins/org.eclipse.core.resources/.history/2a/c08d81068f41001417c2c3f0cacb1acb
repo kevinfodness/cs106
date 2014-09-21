@@ -11,14 +11,16 @@ public class TestProject {
 	 * @param args Arguments passed to the program.
 	 */
 	public static void main(String[] args) {
-		System.out.println(sumOfSquares(10));
+		System.out.println(getTip(20.00, 0.2));
 	}
 	
-	public static int sumOfSquares(int max) {
-		int total = 0;
-		for (int i = 1; i <= max; i++) {
-			total += i * i;
+	public static double getTip(double total, double percent) {
+		if (total <= 0) {
+			return 0.0;
 		}
-		return total;
+		if (percent <= 0) {
+			return 0.0;
+		}
+		return total * percent;
 	}
 }
