@@ -1,8 +1,23 @@
+/* Import utilities and IO for Scanner and File. */
 import java.util.*;
 import java.io.*;
 
+/**
+ * A program to store a transaction list in arrays and calculate the total balance.
+ * 
+ * @author Kevin Fodness <kevin@kevinfodness.com>
+ */
 public class Project4a {
 
+	/**
+	 * The main method. Does all the things.
+	 * 
+	 * @param args Arguments passed to the program.
+	 * 
+	 * @throws FileNotFoundException
+	 * 
+	 * @return void
+	 */
 	public static void main(String[] args) throws FileNotFoundException {
 		
 		/* Count the number of lines in the file. */
@@ -30,12 +45,16 @@ public class Project4a {
 			
 			/* Get the account type. */
 			accounts[i] = fileReader.next();
+			
+			/* If the account type is Credit, also add the next word ("Card") */
 			if (accounts[i].equals("Credit")) {
 				accounts[i] = accounts[i] + " " + fileReader.next();
 			}
 			
 			/* Get the transaction type. */
 			transactions[i] = fileReader.next();
+			
+			/* If the transaction type is Opening, also add the next word ("Balance") */
 			if (transactions[i].equals("Opening")) {
 				transactions[i] = transactions[i] + " " + fileReader.next();
 			}
@@ -48,24 +67,34 @@ public class Project4a {
 		}
 		fileReader.close();
 		
-		/* Calculate totals. */
+		/* Declare variables to track the totals in each account. */
 		double checking = 0.0;
 		double savings = 0.0;
 		double credit = 0.0;
+
+		/* Calculate totals. */
 		for (i = 0; i < dates.length; i++) {
+			
+			/* Fork for the account type, to increment the proper variable. */
 			if (accounts[i].equals("Checking")) {
+				
+				/* If the transaction type is a withdrawal, subtract - otherwise add. */
 				if (transactions[i].equals("Withdrawal")) {
 					checking -= amounts[i];
 				} else {
 					checking += amounts[i];
 				}
 			} else if (accounts[i].equals("Savings")) {
+
+				/* If the transaction type is a withdrawal, subtract - otherwise add. */
 				if (transactions[i].equals("Withdrawal")) {
 					savings -= amounts[i];
 				} else {
 					savings += amounts[i];
 				}
 			} else {
+				
+				/* If the transaction type is a withdrawal, subtract - otherwise add. */
 				if (transactions[i].equals("Withdrawal")) {
 					credit -= amounts[i];
 				} else {
@@ -73,6 +102,8 @@ public class Project4a {
 				}
 			}
 		}
+		
+		/* Print totals to the screen. */
 		System.out.println("Checking balance: $" + checking);
 		System.out.println("Savings balance: $" + savings);
 		System.out.println("Credit Card balance: $" + credit);
