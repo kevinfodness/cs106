@@ -1008,3 +1008,56 @@ Caused by: java.lang.ClassNotFoundException: org.codehaus.jdt.groovy.integration
 
 !ENTRY org.eclipse.m2e.logback.appender 4 0 2014-09-10 18:30:03.968
 !MESSAGE Failed to open search index.
+!SESSION 2014-09-24 18:30:21.511 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_67
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2014-09-24 18:34:56.616
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-09-24 18:34:56.616
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@13c8c886,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@62e4df8f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2014-09-24 18:40:05.318
+!MESSAGE Invalid preference category path: org.eclipse.ptp.ui.preferences.ptpPreferencesPage (bundle: org.eclipse.ptp.etfw, page: org.eclipse.ptp.etfw.preferences.ExternalToolsMainPage)
+
+!ENTRY org.eclipse.ui 2 2 2014-09-24 18:40:05.320
+!MESSAGE Invalid preference category path: org.eclipse.ptp.ui.preferences.ptpPreferencesPage (bundle: org.eclipse.ptp.pldt.common, page: org.eclipse.ptp.pldt.common.prefs.PLDTPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2014-09-24 18:40:05.336
+!MESSAGE Invalid preference category path: org.eclipse.ptp.ui.preferences.ptpPreferencesPage (bundle: org.eclipse.ptp.rm.jaxb.control.ui, page: org.eclipse.ptp.internal.rm.jaxb.control.ui.preferences.JAXBRMPreferencesPage)
+!SESSION 2014-10-15 18:17:34.744 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_67
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui 2 2 2014-10-15 19:19:15.268
+!MESSAGE Invalid preference category path: org.eclipse.ptp.ui.preferences.ptpPreferencesPage (bundle: org.eclipse.ptp.etfw, page: org.eclipse.ptp.etfw.preferences.ExternalToolsMainPage)
+
+!ENTRY org.eclipse.ui 2 2 2014-10-15 19:19:15.299
+!MESSAGE Invalid preference category path: org.eclipse.ptp.ui.preferences.ptpPreferencesPage (bundle: org.eclipse.ptp.pldt.common, page: org.eclipse.ptp.pldt.common.prefs.PLDTPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2014-10-15 19:19:15.320
+!MESSAGE Invalid preference category path: org.eclipse.ptp.ui.preferences.ptpPreferencesPage (bundle: org.eclipse.ptp.rm.jaxb.control.ui, page: org.eclipse.ptp.internal.rm.jaxb.control.ui.preferences.JAXBRMPreferencesPage)

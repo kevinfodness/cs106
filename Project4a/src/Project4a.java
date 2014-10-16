@@ -1,0 +1,81 @@
+import java.util.*;
+import java.io.*;
+
+public class Project4a {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		/* Count the number of lines in the file. */
+		int numLines = 0;
+		Scanner fileReader = new Scanner(new File("../../Downloads/input.txt"));
+		while (fileReader.hasNextLine()) {
+			fileReader.nextLine();
+			numLines++;
+		}
+		fileReader.close();
+
+		/* Provision arrays to hold the values based on the number of lines in the file. */
+		String[] dates = new String[numLines];
+		String[] accounts = new String[numLines];
+		String[] transactions = new String[numLines];
+		double[] amounts = new double[numLines];
+		
+		/* Populate the arrays from the file. */
+		int i = 0;
+		fileReader = new Scanner(new File("../../Downloads/input.txt"));
+		while (fileReader.hasNext()) {
+			
+			/* Get the date (first element). */
+			dates[i] = fileReader.next();
+			
+			/* Get the account type. */
+			accounts[i] = fileReader.next();
+			if (accounts[i].equals("Credit")) {
+				accounts[i] = accounts[i] + " " + fileReader.next();
+			}
+			
+			/* Get the transaction type. */
+			transactions[i] = fileReader.next();
+			if (transactions[i].equals("Opening")) {
+				transactions[i] = transactions[i] + " " + fileReader.next();
+			}
+			
+			/* Get the amount. */
+			amounts[i] = fileReader.nextDouble();
+			
+			/* Increment index. */
+			i++;
+		}
+		fileReader.close();
+		
+		/* Calculate totals. */
+		double checking = 0.0;
+		double savings = 0.0;
+		double credit = 0.0;
+		for (i = 0; i < dates.length; i++) {
+			if (accounts[i].equals("Checking")) {
+				if (transactions[i].equals("Withdrawal")) {
+					checking -= amounts[i];
+				} else {
+					checking += amounts[i];
+				}
+			} else if (accounts[i].equals("Savings")) {
+				if (transactions[i].equals("Withdrawal")) {
+					savings -= amounts[i];
+				} else {
+					savings += amounts[i];
+				}
+			} else {
+				if (transactions[i].equals("Withdrawal")) {
+					credit -= amounts[i];
+				} else {
+					credit += amounts[i];
+				}
+			}
+		}
+		System.out.println("Checking balance: $" + checking);
+		System.out.println("Savings balance: $" + savings);
+		System.out.println("Credit Card balance: $" + credit);
+	}
+
+}
