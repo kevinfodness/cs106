@@ -1,5 +1,0 @@
-INDEX VERSION 1.126+/department/home/kfodness/cs106/.metadata/.plugins/org.eclipse.jdt.core
-4203328324.index
-349270591.index
-3209442789.index
-820019804.index
