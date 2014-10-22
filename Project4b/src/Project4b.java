@@ -75,9 +75,9 @@ public class Project4b {
 		for (Transaction t : transactions) {
 			
 			/* Fork for the account type, to increment the proper variable. */
-			if (t.accountType.equals("Checking")) {
+			if (t.isChecking()) {
 				checking += t.getAmount();
-			} else if (t.accountType.equals("Savings")) {
+			} else if (t.isSavings()) {
 				savings += t.getAmount();
 			} else {
 				credit += t.getAmount();

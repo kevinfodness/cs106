@@ -6,16 +6,16 @@
 public class Transaction {
 
 	/* A variable to track the date of the transaction. */
-	String date;
+	private String date;
 	
 	/* A variable to track the account type. */
-	String accountType;
+	private String accountType;
 	
 	/* A variable to track the transaction type. */
-	String transactionType;
+	private String transactionType;
 	
 	/* A variable to track the amount of the transaction. */
-	double amount;
+	private double amount;
 	
 	/**
 	 * Constructor function. Sets initial values based on provided values.
@@ -26,12 +26,12 @@ public class Transaction {
 	 * @param initAmount			The starting amount.
 	 */
 	public Transaction(String initDate, String initAccountType, String initTransactionType, double initAmount) {
-		date = initDate;
-		accountType = initAccountType;
-		transactionType = initTransactionType;
-		amount = initAmount;
+		this.date = initDate;
+		this.accountType = initAccountType;
+		this.transactionType = initTransactionType;
+		this.amount = initAmount;
 	}
-
+	
 	/**
 	 * A method to return the adjusted amount based on transaction type.
 	 * 
@@ -40,19 +40,46 @@ public class Transaction {
 	public double getAmount() {
 		
 		/* If the transaction type is a withdrawal, return the amount as negative. */
-		if (transactionType.equalsIgnoreCase("Withdrawal")) {
-			return -1 * amount;
+		if (this.transactionType.equalsIgnoreCase("Withdrawal")) {
+			return -1 * this.amount;
 		}
 
-		return amount;
+		return this.amount;
 	}
-	
+
+	/**
+	 * A function to determine if the account type is Checking.
+	 * 
+	 * @return True if the account type is checking, false otherwise.
+	 */
+	public boolean isChecking() {
+		return (this.accountType.equalsIgnoreCase("Checking"));
+	}
+
+	/**
+	 * A function to determine if the account type is Credit Card.
+	 * 
+	 * @return True if the account type is Credit Card, false otherwise.
+	 */
+	public boolean isCreditCard() {
+		return (this.accountType.equalsIgnoreCase("Credit Card"));
+	}
+
+	/**
+	 * A function to determine if the account type is Savings.
+	 * 
+	 * @return True if the account type is savings, false otherwise.
+	 */
+	public boolean isSavings() {
+		return (this.accountType.equalsIgnoreCase("Savings"));
+	}
+
 	/**
 	 * A method to convert this object to a String.
 	 * 
 	 * @return String The stringified object.
 	 */
 	public String toString() {
-		return date + "\t" + accountType + "\t" + transactionType + "\t" + amount;
+		return this.date + "\t" + this.accountType + "\t" + this.transactionType + "\t" + this.amount;
 	}
 }
