@@ -26,6 +26,24 @@ public class Transaction {
 	 * @param initAmount			The starting amount.
 	 */
 	public Transaction(String initDate, String initAccountType, String initTransactionType, double initAmount) {
+		
+		/* Validate that account type is one of the registered types. */
+		if (!initAccountType.equalsIgnoreCase("Checking")
+			&& !initAccountType.equalsIgnoreCase("Savings")
+			&& !initAccountType.equalsIgnoreCase("Credit Card")
+		) {
+			throw new IllegalArgumentException();
+		}
+		
+		/* Validate that transaction type is one of the registered types. */
+		if (!initTransactionType.equalsIgnoreCase("Deposit")
+			&& !initTransactionType.equalsIgnoreCase("Withdrawal")
+			&& !initTransactionType.equalsIgnoreCase("Opening Balance")
+		) {
+			throw new IllegalArgumentException();
+		}
+		
+		/* Set variables. */
 		this.date = initDate;
 		this.accountType = initAccountType;
 		this.transactionType = initTransactionType;
