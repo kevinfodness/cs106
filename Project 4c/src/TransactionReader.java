@@ -62,8 +62,16 @@ public class TransactionReader {
 				/* Augment data structures based on line data. */
 				for (Account a : this.accounts) {
 					if (a.getName().equalsIgnoreCase(line[1])) {
+						
+						/* Indicate that this account was found. */
 						found = true;
-						a.addTransaction(t);
+						
+						/* Add the transaction or the opening balance, based on type. */
+						if (line[2].equalsIgnoreCase("Opening Balance")) {
+							a.setOpeningBalance(t.getAmount());
+						} else {
+							a.addTransaction(t);
+						}
 					}
 				}
 				
