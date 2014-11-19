@@ -38,6 +38,24 @@ public class LectureExamples {
     }
 
     /**
+     * Recursive method to display the contents of a directory.
+     *
+     * @param f The File object to examine.
+     */
+    private static void mapFilesystem(File f) {
+    /* Determine if the source path is a file or a directory. */
+        if (f.isDirectory()) {
+        /* Loop through the directory contents and process each item. */
+            for (File item : f.listFiles()) {
+                mapFilesystem(item);
+            }
+        } else {
+        /* Print the filepath to this file. */
+            System.out.println(f.getAbsolutePath());
+        }
+    }
+
+    /**
      * Seed method to launch a recursive chain to compute Fibonacci numbers.
      *
      * @param max The maximum number to compute.
@@ -47,24 +65,12 @@ public class LectureExamples {
     }
 
     /**
-     * Recursive method to display the contents of a directory.
+     * Seed method to launch a recursive chain to display the contents of a directory.
      *
      * @param src The source filepath. Can be absolute or relative to the root of this project.
      */
     public static void mapFilesystem(String src) {
-        /* Convert source path into File object. */
-        File f = new File(src);
-
-        /* Determine if the source path is a file or a directory. */
-        if (f.isDirectory()) {
-            /* Loop through the directory contents and process each item. */
-            for (String file : f.list()) {
-                mapFilesystem(src + '/' + file);
-            }
-        } else {
-            /* Print the filepath to this file. */
-            System.out.println(src);
-        }
+        mapFilesystem(new File(src));
     }
 
     /**
