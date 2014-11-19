@@ -14,23 +14,8 @@ public class LectureExamples {
      */
     public static void main(String[] args) {
         System.out.println(sumOfSquares(7));
-        fibonacci(0, 1, 1000);
+        fibonacci(1000);
         mapFilesystem("/Users/kevin/IdeaProjects/cs106");
-    }
-
-    /**
-     * A recursive method to compute the sum of squares.
-     *
-     * @param max The maximum number of squares to return.
-     * @return The sum of the current square plus the next one, if applicable.
-     */
-    public static int sumOfSquares(int max) {
-        /* As long as there are still numbers left, add the next square. */
-        if (max > 1) {
-            return max * max + sumOfSquares(max - 1);
-        }
-
-        return 1;
     }
 
     /**
@@ -40,7 +25,7 @@ public class LectureExamples {
      * @param next    The next number in sequence.
      * @param max     The maximum number to compute.
      */
-    public static void fibonacci(int current, int next, int max) {
+    private static void fibonacci(int current, int next, int max) {
         if (next < max) {
             int total = current + next;
             current = next;
@@ -50,6 +35,15 @@ public class LectureExamples {
         } else {
             System.out.println();
         }
+    }
+
+    /**
+     * Seed method to launch a recursive chain to compute Fibonacci numbers.
+     *
+     * @param max The maximum number to compute.
+     */
+    public static void fibonacci(int max) {
+        fibonacci(0, 1, max);
     }
 
     /**
@@ -71,5 +65,20 @@ public class LectureExamples {
             /* Print the filepath to this file. */
             System.out.println(src);
         }
+    }
+
+    /**
+     * A recursive method to compute the sum of squares.
+     *
+     * @param max The maximum number of squares to return.
+     * @return The sum of the current square plus the next one, if applicable.
+     */
+    public static int sumOfSquares(int max) {
+        /* As long as there are still numbers left, add the next square. */
+        if (max > 1) {
+            return max * max + sumOfSquares(max - 1);
+        }
+
+        return 1;
     }
 }
