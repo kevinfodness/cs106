@@ -1,3 +1,5 @@
+import java.io.File;
+
 /**
  * Contains a class to represent a program to test code for lecture slides.
  *
@@ -13,6 +15,7 @@ public class LectureExamples {
     public static void main(String[] args) {
         System.out.println(sumOfSquares(7));
         fibonacci(0, 1, 1000);
+        mapFilesystem("/Users/kevin/IdeaProjects/cs106");
     }
 
     /**
@@ -46,6 +49,27 @@ public class LectureExamples {
             fibonacci(current, next, max);
         } else {
             System.out.println();
+        }
+    }
+
+    /**
+     * Recursive method to display the contents of a directory.
+     *
+     * @param src The source filepath. Can be absolute or relative to the root of this project.
+     */
+    public static void mapFilesystem(String src) {
+        /* Convert source path into File object. */
+        File f = new File(src);
+
+        /* Determine if the source path is a file or a directory. */
+        if (f.isDirectory()) {
+            /* Loop through the directory contents and process each item. */
+            for (String file : f.list()) {
+                mapFilesystem(src + '/' + file);
+            }
+        } else {
+            /* Print the filepath to this file. */
+            System.out.println(src);
         }
     }
 }
