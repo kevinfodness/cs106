@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Puzzle {
 
     /* Variable to track the grids in the puzzle. */
-    Grid[][] grids;
+    private Grid[][] grids;
 
     /**
      * Constructor. Initializes object.

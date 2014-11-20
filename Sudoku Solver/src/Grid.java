@@ -18,6 +18,32 @@ public class Grid {
     }
 
     /**
+     * Method to get a column of values.
+     *
+     * @param pos The column to retrieve.
+     * @return An integer array of values in the column.
+     */
+    public int[] getCol(int pos) {
+        int[] column = new int[this.values.length];
+
+        for (int row = 0; row < this.values.length; row++) {
+            column[row] = this.values[row][pos];
+        }
+
+        return column;
+    }
+
+    /**
+     * Method to get a row of values.
+     *
+     * @param pos The row to retrieve.
+     * @return An integer array of values in the row.
+     */
+    public int[] getRow(int pos) {
+        return this.values[pos];
+    }
+
+    /**
      * A method to set the value of a specific point.
      *
      * @param x     The X coordinate for the value.
