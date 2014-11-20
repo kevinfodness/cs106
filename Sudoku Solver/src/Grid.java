@@ -16,4 +16,15 @@ public class Grid {
     public Grid(int[] values) {
         this.values = values;
     }
+
+    /**
+     * A method to return the value at a particular position.
+     *
+     * @param pos The position to look up.
+     *
+     * @return The value at the specified position.
+     */
+    public int valueAt(int pos) {
+        return this.values[pos];
+    }
 }

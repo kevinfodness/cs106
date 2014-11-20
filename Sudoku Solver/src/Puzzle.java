@@ -95,4 +95,51 @@ public class Puzzle {
             System.out.println("Can't find the file specified.");
         }
     }
+
+    /**
+     * Method to return a string representing this object.
+     *
+     * @return The string representing this object.
+     */
+    public String toString() {
+
+        /* Create string to store return value. */
+        String value = "";
+
+        /* Loop over grids in blocks of three. */
+        for (int i = 0; i < 3; i++) {
+            Grid first = this.grids[i * 3];
+            Grid second = this.grids[i * 3 + 1];
+            Grid third = this.grids[i * 3 + 2];
+            value += first.valueAt(0) + " "
+                    + first.valueAt(1) + " "
+                    + first.valueAt(2) + " "
+                    + second.valueAt(0) + " "
+                    + second.valueAt(1) + " "
+                    + second.valueAt(2) + " "
+                    + third.valueAt(0) + " "
+                    + third.valueAt(1) + " "
+                    + third.valueAt(2) + "\n"
+                    + first.valueAt(3) + " "
+                    + first.valueAt(4) + " "
+                    + first.valueAt(5) + " "
+                    + second.valueAt(3) + " "
+                    + second.valueAt(4) + " "
+                    + second.valueAt(5) + " "
+                    + third.valueAt(3) + " "
+                    + third.valueAt(4) + " "
+                    + third.valueAt(5) + "\n"
+                    + first.valueAt(6) + " "
+                    + first.valueAt(7) + " "
+                    + first.valueAt(8) + " "
+                    + second.valueAt(6) + " "
+                    + second.valueAt(7) + " "
+                    + second.valueAt(8) + " "
+                    + third.valueAt(6) + " "
+                    + third.valueAt(7) + " "
+                    + third.valueAt(8) + "\n";
+        }
+
+        return value;
+    }
 }
