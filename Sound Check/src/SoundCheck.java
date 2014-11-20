@@ -13,6 +13,12 @@ import java.io.InputStream;
  */
 public class SoundCheck {
 
+    /**
+     * Main method - directs control flow.
+     *
+     * @param args Arguments passed on the command line.
+     * @see <http://alvinalexander.com/java/java-audio-example-java-au-play-sound>
+     */
     public static void main(String[] args) {
         // open the sound file as a Java input stream
         String gongFile = "/Volumes/Sites/cs106/Sound Check/src/chicken.au";
