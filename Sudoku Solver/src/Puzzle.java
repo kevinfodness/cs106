@@ -95,7 +95,7 @@ public class Puzzle {
                     /* Loop over grid values within a column. */
                     for (int gridValue = 0; gridValue < this.grids.length; gridValue++) {
 
-                        /* Add the value to the appropriate grid. */
+                        /* Add the value to the appropriate grid. Subtracting 48 from the value converts from ASCII to normal int. */
                         this.grids[gridRow][gridColumn].set(gridLine, gridValue, line.charAt(gridColumn * 3 + gridValue) - 48);
                     }
                 }
