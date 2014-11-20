@@ -83,7 +83,7 @@ public class Puzzle {
         String value = "";
 
         /* Loop through rows. */
-        for (int gridRow = 0; gridRow < this.grids.length; gridRow++) {
+        for (Grid[] gridRow : this.grids) {
 
             /* Loop through individual rows. */
             for (int row = 0; row < this.grids.length; row++) {
@@ -95,7 +95,7 @@ public class Puzzle {
                     for (int col = 0; col < this.grids.length; col++) {
 
                         /* Add the value to the string. */
-                        value += this.grids[gridRow][gridCol].valueAt(row, col) + " ";
+                        value += gridRow[gridCol].valueAt(row, col) + " ";
                     }
                 }
 
