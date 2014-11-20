@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /**
  * A class that contains a program to solve Sudoku puzzles.
  *
@@ -15,7 +13,7 @@ public class SudokuSolver {
      */
     public static void main(String[] args) {
         Puzzle p = new Puzzle();
-        p.load("/Volumes/Sites/cs106/Sudoku Solver/src/puzzle.txt");
+        p.load("/Users/kevin/IdeaProjects/cs106/Sudoku Solver/src/puzzle.txt");
         System.out.println(p);
     }
 }

@@ -6,25 +6,36 @@
 public class Grid {
 
     /* A variable to keep track of the values in this grid. */
-    private int[] values;
+    private int[][] values;
 
     /**
-     * Constructor. Sets initial values.
+     * Constructor. Sets size of grid.
      *
-     * @param values The initial values to populate this grid with.
+     * @param size The size of the grid.
      */
-    public Grid(int[] values) {
-        this.values = values;
+    public Grid(int size) {
+        this.values = new int[size][size];
+    }
+
+    /**
+     * A method to set the value of a specific point.
+     *
+     * @param x     The X coordinate for the value.
+     * @param y     The Y coordinate for the value.
+     * @param value The value to set.
+     */
+    public void set(int x, int y, int value) {
+        this.values[x][y] = value;
     }
 
     /**
      * A method to return the value at a particular position.
      *
-     * @param pos The position to look up.
-     *
+     * @param x The X position to look up.
+     * @param y The Y position to look up.
      * @return The value at the specified position.
      */
-    public int valueAt(int pos) {
-        return this.values[pos];
+    public int valueAt(int x, int y) {
+        return this.values[x][y];
     }
 }
