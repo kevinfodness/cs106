@@ -20,6 +20,24 @@ public class Puzzle {
     }
 
     /**
+     * A method to determine if a column in the puzzle contains a specific value.
+     *
+     * @param gridCol The grid column to check.
+     * @param col     The column number within the grid to check.
+     * @param value   The value to check.
+     * @return true if found, false if not.
+     */
+    private boolean colContains(int gridCol, int col, int value) {
+        for (Grid[] g : this.grids) {
+            if (g[gridCol].colContains(col, value)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Method to process a file into this object, given a valid Scanner object.
      *
      * @param s The scanner object to use when reading the file.
