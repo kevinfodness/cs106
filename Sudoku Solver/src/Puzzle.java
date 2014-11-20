@@ -142,6 +142,8 @@ public class Puzzle {
 
         /* Determine if we can safely place this number in the grid, starting at the given offset. */
         while (offset < this.grids.length * this.grids.length) {
+
+            /* If we are able to place this value at this offset, try to place the next value. Otherwise, adjust offset. */
             if (this.place(gridRow, gridCol, value, offset)) {
 
                 /* Determine if subsequent placements were successful, or if we need to roll back and adjust. */
@@ -156,6 +158,7 @@ public class Puzzle {
             }
         }
 
+        /* If we reach here, it means that the value was not able to be placed in the grid at any offset. */
         return false;
     }
 
