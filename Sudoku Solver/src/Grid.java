@@ -59,13 +59,19 @@ public class Grid {
     }
 
     /**
-     * A method to remove a value at a specific point.
+     * A method to remove a given value.
      *
-     * @param row The row for the value.
-     * @param col The col for the value.
+     * @param value The value to remove.
      */
-    public void remove(int row, int col) {
-        this.values[row][col] = 0;
+    public void remove(int value) {
+        for (int row = 0; row < this.values.length; row++) {
+            for (int col = 0; col < this.values.length; col++) {
+                if (this.values[row][col] == value) {
+                    this.values[row][col] = 0;
+                    return;
+                }
+            }
+        }
     }
 
     /**

@@ -38,6 +38,39 @@ public class Puzzle {
     }
 
     /**
+     * A method for placing a value in a given grid given a particular offset.
+     *
+     * @param gridRow The grid row to target.
+     * @param gridCol The grid column to target.
+     * @param value   The value to place.
+     * @param offset  The number of open spaces from the beginning to shift the value.
+     * @return true if able to place the value, false otherwise.
+     */
+    private boolean place(int gridRow, int gridCol, int value, int offset) {
+
+        /* Set column and row positions within the grid based on offset. */
+        int row = offset / this.grids.length;
+        int col = offset % this.grids.length;
+
+        /* Determine if there is already something in this position. */
+        if (this.grids[gridRow][gridCol].valueAt(row, col) > 0) {
+            return false;
+        }
+
+        /* Determine if we can put this value in this position. */
+        if (this.grids[gridRow][gridCol].gridContains(value)
+                || this.rowContains(gridRow, row, value)
+                || this.colContains(gridCol, col, value)) {
+            return false;
+        }
+
+        /* Place the value. */
+        this.grids[gridRow][gridCol].set(row, col, value);
+
+        return true;
+    }
+
+    /**
      * Method to process a file into this object, given a valid Scanner object.
      *
      * @param s The scanner object to use when reading the file.
@@ -75,37 +108,55 @@ public class Puzzle {
      *
      * @param gridRow The grid's row coordinate.
      * @param gridCol The grid's column coordinate.
+     * @param value   The value we are attempting to place.
+     * @param offset  The offset of the value's position within the grid relative to the first available space.
      * @return true if able to solve for the row and column, false otherwise.
      */
-    private boolean recursiveSolver(int gridRow, int gridCol) {
+    private boolean recursiveSolver(int gridRow, int gridCol, int value, int offset) {
 
-        /* Try to fill each number in this grid. */
-        for (int i = 1; i <= this.grids.length * this.grids.length; i++) {
+        /* Advance the value to the next value missing from this grid. */
+        while (this.grids[gridRow][gridCol].gridContains(value)) {
+            value++;
+        }
 
-            /* Determine if the number exists in the grid already. */
-            if (this.grids[gridRow][gridCol].gridContains(i)) {
-                System.out.println("Grid already contains " + i);
-                continue;
+        /* Determine if we have placed all of the numbers in this grid. */
+        if (value > this.grids.length * this.grids.length) {
+
+            /* Advance the grid position. */
+            gridCol++;
+
+            /* If past the end of the column, move to the first column in the next row. */
+            if (gridCol == this.grids.length) {
+                gridCol = 0;
+                gridRow++;
             }
 
-            System.out.println("Trying to place " + i);
+            /* If not past the end of the rows, keep going. */
+            if (gridRow < this.grids.length) {
+                return recursiveSolver(gridRow, gridCol, 1, 0);
+            }
+
+            /* Past the end of the rows = we have placed everything successfully. */
+            return true;
         }
 
-        /* Move on to the next grid in this column. */
-        gridCol++;
+        /* Determine if we can safely place this number in the grid, starting at the given offset. */
+        while (offset < this.grids.length * this.grids.length) {
+            if (this.place(gridRow, gridCol, value, offset)) {
 
-        /* If past the end of the column, move to the first column in the next row. */
-        if (gridCol == this.grids.length) {
-            gridCol = 0;
-            gridRow++;
+                /* Determine if subsequent placements were successful, or if we need to roll back and adjust. */
+                if (recursiveSolver(gridRow, gridCol, value++, 0)) {
+                    return true;
+                } else {
+                    this.grids[gridRow][gridCol].remove(value);
+                    offset++;
+                }
+            } else {
+                offset++;
+            }
         }
 
-        /* If not past the end of the rows, keep going. */
-        if (gridRow < this.grids.length) {
-            recursiveSolver(gridRow, gridCol);
-        }
-
-        return true;
+        return false;
     }
 
     /**
@@ -150,7 +201,7 @@ public class Puzzle {
      * A method to solve the puzzle.
      */
     public void solve() {
-        if (this.recursiveSolver(0, 0)) {
+        if (this.recursiveSolver(0, 0, 1, 0)) {
             System.out.println("Solution found!");
             System.out.println(this.toString());
         } else {
