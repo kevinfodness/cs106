@@ -34,8 +34,45 @@ public class Puzzle {
             String second = s.nextLine();
             String third = s.nextLine();
 
-            /* Build three grids. */
+            /* Create arrays for grids. */
+            int[] grid1 = {
+                    first.charAt(0),
+                    first.charAt(1),
+                    first.charAt(2),
+                    second.charAt(0),
+                    second.charAt(1),
+                    second.charAt(2),
+                    third.charAt(0),
+                    third.charAt(1),
+                    third.charAt(2)
+            };
+            int[] grid2 = {
+                    first.charAt(3),
+                    first.charAt(4),
+                    first.charAt(5),
+                    second.charAt(3),
+                    second.charAt(4),
+                    second.charAt(5),
+                    third.charAt(3),
+                    third.charAt(4),
+                    third.charAt(5)
+            };
+            int[] grid3 = {
+                    first.charAt(6),
+                    first.charAt(7),
+                    first.charAt(8),
+                    second.charAt(6),
+                    second.charAt(7),
+                    second.charAt(8),
+                    third.charAt(6),
+                    third.charAt(7),
+                    third.charAt(8)
+            };
 
+            /* Process arrays into grids. */
+            this.grids[i * 3] = new Grid(grid1);
+            this.grids[i * 3 + 1] = new Grid(grid2);
+            this.grids[i * 3 + 2] = new Grid(grid3);
         }
     }
 

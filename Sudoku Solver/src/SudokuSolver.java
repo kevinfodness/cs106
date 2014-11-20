@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * A class that contains a program to solve Sudoku puzzles.
  *
@@ -12,6 +14,7 @@ public class SudokuSolver {
      * @param args The arguments passed to the program on the command-line.
      */
     public static void main(String[] args) {
-
+        Puzzle p = new Puzzle();
+        p.load("/Volumes/Sites/cs106/Sudoku Solver/src/puzzle.txt");
     }
 }
