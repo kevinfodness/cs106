@@ -109,6 +109,14 @@ public class Puzzle {
     }
 
     /**
+     * A method to solve the puzzle.
+     */
+    public void solve() {
+        // solve for one grid at a time
+        // use recursive backtracking to reject bad solutions
+    }
+
+    /**
      * Method to return a string representing this object.
      *
      * @return The string representing this object.
