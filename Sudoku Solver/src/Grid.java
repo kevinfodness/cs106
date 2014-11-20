@@ -18,29 +18,63 @@ public class Grid {
     }
 
     /**
-     * Method to get a column of values.
+     * Method to determine if a column contains a value.
      *
-     * @param pos The column to retrieve.
-     * @return An integer array of values in the column.
+     * @param pos   The column to retrieve.
+     * @param value The value to check.
+     * @return true if the column contains the value, false otherwise.
      */
-    public int[] getCol(int pos) {
-        int[] column = new int[this.values.length];
+    public boolean colContains(int pos, int value) {
 
-        for (int row = 0; row < this.values.length; row++) {
-            column[row] = this.values[row][pos];
+        /* Loop through each row and determine if the value exists at the given column. */
+        for (int[] row : this.values) {
+            if (row[pos] == value) {
+                return true;
+            }
         }
 
-        return column;
+        return false;
     }
 
     /**
-     * Method to get a row of values.
+     * Method to determine if the grid contains a value.
      *
-     * @param pos The row to retrieve.
-     * @return An integer array of values in the row.
+     * @param value The value to check.
+     * @return true if the grid contains the value, false otherwise.
      */
-    public int[] getRow(int pos) {
-        return this.values[pos];
+    public boolean gridContains(int value) {
+
+        /* Loop through each row. */
+        for (int[] row : this.values) {
+
+            /* Loop through each column. */
+            for (int i : row) {
+                if (i == value) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Method to determine if a row contains a value.
+     *
+     * @param pos   The row to retrieve.
+     * @param value The value to check.
+     * @return true if the row contains the value, false otherwise.
+     */
+    public boolean rowContains(int pos, int value) {
+
+        /* Loop through the row and determine if any column contains the value. */
+        for (int i : this.values[pos]) {
+            if (i == value) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**
