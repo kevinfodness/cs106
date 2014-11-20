@@ -36,37 +36,37 @@ public class Puzzle {
 
             /* Create arrays for grids. */
             int[] grid1 = {
-                    first.charAt(0),
-                    first.charAt(1),
-                    first.charAt(2),
-                    second.charAt(0),
-                    second.charAt(1),
-                    second.charAt(2),
-                    third.charAt(0),
-                    third.charAt(1),
-                    third.charAt(2)
+                    first.charAt(0) - 48,
+                    first.charAt(1) - 48,
+                    first.charAt(2) - 48,
+                    second.charAt(0) - 48,
+                    second.charAt(1) - 48,
+                    second.charAt(2) - 48,
+                    third.charAt(0) - 48,
+                    third.charAt(1) - 48,
+                    third.charAt(2) - 48
             };
             int[] grid2 = {
-                    first.charAt(3),
-                    first.charAt(4),
-                    first.charAt(5),
-                    second.charAt(3),
-                    second.charAt(4),
-                    second.charAt(5),
-                    third.charAt(3),
-                    third.charAt(4),
-                    third.charAt(5)
+                    first.charAt(3) - 48,
+                    first.charAt(4) - 48,
+                    first.charAt(5) - 48,
+                    second.charAt(3) - 48,
+                    second.charAt(4) - 48,
+                    second.charAt(5) - 48,
+                    third.charAt(3) - 48,
+                    third.charAt(4) - 48,
+                    third.charAt(5) - 48
             };
             int[] grid3 = {
-                    first.charAt(6),
-                    first.charAt(7),
-                    first.charAt(8),
-                    second.charAt(6),
-                    second.charAt(7),
-                    second.charAt(8),
-                    third.charAt(6),
-                    third.charAt(7),
-                    third.charAt(8)
+                    first.charAt(6) - 48,
+                    first.charAt(7) - 48,
+                    first.charAt(8) - 48,
+                    second.charAt(6) - 48,
+                    second.charAt(7) - 48,
+                    second.charAt(8) - 48,
+                    third.charAt(6) - 48,
+                    third.charAt(7) - 48,
+                    third.charAt(8) - 48
             };
 
             /* Process arrays into grids. */
