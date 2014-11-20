@@ -45,7 +45,7 @@ public class Puzzle {
                     for (int gridValue = 0; gridValue < this.grids.length; gridValue++) {
 
                         /* Add the value to the appropriate grid. */
-                        this.grids[gridRow][gridColumn].set(gridValue, gridLine, line.charAt(gridColumn * 3 + gridValue) - 48);
+                        this.grids[gridRow][gridColumn].set(gridLine, gridValue, line.charAt(gridColumn * 3 + gridValue) - 48);
                     }
                 }
             }
@@ -81,6 +81,28 @@ public class Puzzle {
 
         /* Create string to store return value. */
         String value = "";
+
+        /* Loop through rows. */
+        for (int gridRow = 0; gridRow < this.grids.length; gridRow++) {
+
+            /* Loop through individual rows. */
+            for (int row = 0; row < this.grids.length; row++) {
+
+                /* Loop through grid columns. */
+                for (int gridCol = 0; gridCol < this.grids.length; gridCol++) {
+
+                    /* Loop through individual columns. */
+                    for (int col = 0; col < this.grids.length; col++) {
+
+                        /* Add the value to the string. */
+                        value += this.grids[gridRow][gridCol].valueAt(row, col) + " ";
+                    }
+                }
+
+                /* Add a line break. */
+                value += "\n";
+            }
+        }
 
         return value;
     }
