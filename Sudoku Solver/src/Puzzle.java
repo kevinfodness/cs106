@@ -20,24 +20,6 @@ public class Puzzle {
     }
 
     /**
-     * A method to determine if a row in the puzzle contains a specific value.
-     *
-     * @param gridRow The grid row to check.
-     * @param row     The row number within the grid to check.
-     * @param value   The value to check.
-     * @return true if found, false if not.
-     */
-    private boolean rowContains(int gridRow, int row, int value) {
-        for (Grid g : this.grids[gridRow]) {
-            if (g.rowContains(row, value)) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    /**
      * Method to process a file into this object, given a valid Scanner object.
      *
      * @param s The scanner object to use when reading the file.
@@ -68,6 +50,24 @@ public class Puzzle {
                 }
             }
         }
+    }
+
+    /**
+     * A method to determine if a row in the puzzle contains a specific value.
+     *
+     * @param gridRow The grid row to check.
+     * @param row     The row number within the grid to check.
+     * @param value   The value to check.
+     * @return true if found, false if not.
+     */
+    private boolean rowContains(int gridRow, int row, int value) {
+        for (Grid g : this.grids[gridRow]) {
+            if (g.rowContains(row, value)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**
