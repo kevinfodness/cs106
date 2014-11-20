@@ -71,6 +71,17 @@ public class Puzzle {
     }
 
     /**
+     * A method to solve the puzzle recursively, moving grid by grid.
+     *
+     * @param gridRow The grid's row coordinate.
+     * @param gridCol The grid's column coordinate.
+     * @return true if able to solve for the row and column, false otherwise.
+     */
+    private boolean recursiveSolver(int gridRow, int gridCol) {
+        return true;
+    }
+
+    /**
      * A method to determine if a row in the puzzle contains a specific value.
      *
      * @param gridRow The grid row to check.
@@ -112,8 +123,12 @@ public class Puzzle {
      * A method to solve the puzzle.
      */
     public void solve() {
-        // solve for one grid at a time
-        // use recursive backtracking to reject bad solutions
+        if (this.recursiveSolver(0, 0)) {
+            System.out.println("Solution found!");
+            System.out.println(this.toString());
+        } else {
+            System.out.println("There doesn't appear to be a solution to this puzzle.");
+        }
     }
 
     /**
