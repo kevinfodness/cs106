@@ -145,7 +145,7 @@ public class Puzzle {
             if (this.place(gridRow, gridCol, value, offset)) {
 
                 /* Determine if subsequent placements were successful, or if we need to roll back and adjust. */
-                if (recursiveSolver(gridRow, gridCol, value++, 0)) {
+                if (recursiveSolver(gridRow, gridCol, value + 1, 0)) {
                     return true;
                 } else {
                     this.grids[gridRow][gridCol].remove(value);
@@ -203,7 +203,6 @@ public class Puzzle {
     public void solve() {
         if (this.recursiveSolver(0, 0, 1, 0)) {
             System.out.println("Solution found!");
-            System.out.println(this.toString());
         } else {
             System.out.println("There doesn't appear to be a solution to this puzzle.");
         }

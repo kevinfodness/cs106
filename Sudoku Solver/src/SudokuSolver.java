@@ -15,5 +15,6 @@ public class SudokuSolver {
         Puzzle p = new Puzzle();
         p.load("/Users/kevin/IdeaProjects/cs106/Sudoku Solver/src/puzzle.txt");
         p.solve();
+        System.out.println(p);
     }
 }
