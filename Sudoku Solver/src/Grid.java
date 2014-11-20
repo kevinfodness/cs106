@@ -59,6 +59,16 @@ public class Grid {
     }
 
     /**
+     * A method to remove a value at a specific point.
+     *
+     * @param row The row for the value.
+     * @param col The col for the value.
+     */
+    public void remove(int row, int col) {
+        this.values[row][col] = 0;
+    }
+
+    /**
      * Method to determine if a row contains a value.
      *
      * @param pos   The row to retrieve.
@@ -80,12 +90,12 @@ public class Grid {
     /**
      * A method to set the value of a specific point.
      *
-     * @param x     The X coordinate for the value.
-     * @param y     The Y coordinate for the value.
+     * @param row   The row for the value.
+     * @param col   The col for the value.
      * @param value The value to set.
      */
-    public void set(int x, int y, int value) {
-        this.values[x][y] = value;
+    public void set(int row, int col, int value) {
+        this.values[row][col] = value;
     }
 
     /**
