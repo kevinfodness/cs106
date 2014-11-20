@@ -78,6 +78,33 @@ public class Puzzle {
      * @return true if able to solve for the row and column, false otherwise.
      */
     private boolean recursiveSolver(int gridRow, int gridCol) {
+
+        /* Try to fill each number in this grid. */
+        for (int i = 1; i <= this.grids.length * this.grids.length; i++) {
+
+            /* Determine if the number exists in the grid already. */
+            if (this.grids[gridRow][gridCol].gridContains(i)) {
+                System.out.println("Grid already contains " + i);
+                continue;
+            }
+
+            System.out.println("Trying to place " + i);
+        }
+
+        /* Move on to the next grid in this column. */
+        gridCol++;
+
+        /* If past the end of the column, move to the first column in the next row. */
+        if (gridCol == this.grids.length) {
+            gridCol = 0;
+            gridRow++;
+        }
+
+        /* If not past the end of the rows, keep going. */
+        if (gridRow < this.grids.length) {
+            recursiveSolver(gridRow, gridCol);
+        }
+
         return true;
     }
 
