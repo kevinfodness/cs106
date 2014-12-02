@@ -1,4 +1,5 @@
 import java.io.File;
+import java.util.Arrays;
 
 /**
  * Contains a class to represent a program to test code for lecture slides.
@@ -16,6 +17,8 @@ public class LectureExamples {
         System.out.println(sumOfSquares(7));
         fibonacci(1000);
         mapFilesystem("/Users/kevin/IdeaProjects/cs106");
+        String[] strings = {"cat", "bathtub", "apples"};
+        Arrays.sort(strings, new LengthComparator());
     }
 
     /**
